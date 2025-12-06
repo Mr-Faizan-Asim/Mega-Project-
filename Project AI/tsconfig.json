@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    /* === Project structure === */
+    "rootDir": "src",
+    "outDir": "dist",
+
+    /* === Module / runtime === */
+    "target": "ES2020",           // Good for modern Node
+    "module": "ES2020",           // Use ES modules
+    "moduleResolution": "bundler",// Works well with modern ESM packages
+    "types": ["node"],            // Enable Node types (@types/node)
+    "esModuleInterop": true,      // Makes CJS libs easier to import
+
+    /* === Debug / artifacts === */
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    /* === Safety / type checking === */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "skipLibCheck": true,
+
+    /* === Misc === */
+    "resolveJsonModule": true,
+    "isolatedModules": true
+    // ⛔ DO NOT set verbatimModuleSyntax: true here, we want TS to help.
+  },
+  "include": ["src"]
+}
