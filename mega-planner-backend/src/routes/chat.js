@@ -7,6 +7,6 @@ const router = Router();
 
 // POST /api/chat: send a prompt to the Grok API.  Only authenticated users
 // may access this route.
-router.post('/', protect, chat);
+router.post('/', chat);
 
 export default router;

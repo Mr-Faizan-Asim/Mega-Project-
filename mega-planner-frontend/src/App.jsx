@@ -23,31 +23,13 @@ export default function App() {
   const { token, logout } = useAuth();
   return (
     <div>
-      <nav style={{ background: '#333', color: '#fff', padding: '1rem' }}>
-        <Link to="/" style={{ color: '#fff', marginRight: '1rem', textDecoration: 'none' }}>Mega Planner</Link>
-        {token ? (
-          <>
-            <Link to="/chat" style={{ color: '#fff', marginRight: '1rem', textDecoration: 'none' }}>Chat</Link>
-            <button onClick={logout} style={{ padding: '0.5rem 1rem' }}>Logout</button>
-          </>
-        ) : (
-          <>
-            <Link to="/signup" style={{ color: '#fff', marginRight: '1rem', textDecoration: 'none' }}>Sign Up</Link>
-            <Link to="/login" style={{ color: '#fff', marginRight: '1rem', textDecoration: 'none' }}>Login</Link>
-          </>
-        )}
-      </nav>
+
       <div style={{ padding: '2rem' }}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/login" element={<Login />} />
           <Route
-            path="/chat"
+            path="/"
             element={
-              <ProtectedRoute>
                 <Chat />
-              </ProtectedRoute>
             }
           />
         </Routes>
