@@ -1,0 +1,14 @@
+[build]
+  functions = "netlify/functions"
+
+# 1) Send /api/* to your function, preserving /api path for Express
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/api/:splat"
+  status = 200
+
+# 2) Send / (and other non-api routes) to the function so your "/" route works
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/api/"
+  status = 200
