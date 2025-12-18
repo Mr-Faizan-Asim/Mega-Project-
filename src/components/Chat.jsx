@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { sendChatMessage } from '../../../Megaplan-Compliance/src/api.js';
-import { useAuth } from '../../../Megaplan-Compliance/src/state/AuthContext.jsx';
+import { sendChatMessage } from '../../api';
+import { useAuth } from '../../state/AuthContext';
 import './Chat.css';
 
 export default function Chat() {
