@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { sendChatMessage } from '../../api';
-import { useAuth } from '../../state/AuthContext';
-import './Chat.css';
+import { sendChatMessage } from "../api.js";
+import { useAuth } from "../state/AuthContext.jsx";
+import "./Chat.css";
+
 
 export default function Chat() {
   const { token } = useAuth();
